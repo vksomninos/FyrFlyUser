@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_color"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.search.SearchFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/backarrow" />
+
+
+        <TextView
+            android:id="@+id/txtAppointmentID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:text="ok"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        >
+    <TextView
+        android:id="@+id/currentAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phase 5, Sector 59, Mohali, Punjab, Ind..."
+        android:layout_gravity="center"
+        android:layout_weight="1"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:src="@drawable/group__17_" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchAdd"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_back"
+        android:drawableStart="@drawable/search"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:hint="Search for an address"
+        android:textSize="14sp"
+        android:textColorHint="@color/gray"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

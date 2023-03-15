@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="@dimen/dp_5"
+    app:cardElevation="@dimen/dp_5"
+    app:cardCornerRadius="15dp"
+    android:backgroundTint="@color/app_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+             android:background="@drawable/logo"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="Are you Sure Want to Logout?"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="30dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:id="@+id/cancel"
+                android:textColor="@color/white"
+                android:textSize="16dp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="OK"
+                android:padding="@dimen/dp_10"
+                android:layout_marginStart="20dp"
+                android:id="@+id/ok"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

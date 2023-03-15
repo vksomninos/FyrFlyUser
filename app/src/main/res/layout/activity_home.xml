@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mainDrawerUser"
+
+    android:layout_height="match_parent"
+    tools:context=".activites.HomeActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frameLayoutHome"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+       app:navGraph="@navigation/user_navigation" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/menurelative"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/white_circle"
+            android:elevation="15dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_menu_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/home_back"
+            android:elevation="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="30dp"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/naigationUser"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="60dp"
+        android:background="#111B1D"
+        android:onClick="openDrawer"
+        android:layout_gravity="start"
+        />
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

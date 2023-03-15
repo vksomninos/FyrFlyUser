@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment2">
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.fyrflyuser.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_searchDestinationFragment"
+            app:destination="@id/searchDestinationFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_myBookingFragment"
+            app:destination="@id/myBookingFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_myWalletFragment"
+            app:destination="@id/myWalletFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_convertToDriversFragment"
+            app:destination="@id/convertToDriversFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_pushNotificationsFragment"
+            app:destination="@id/pushNotificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_reserveAtripFragment"
+            app:destination="@id/reserveAtripFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_callingFragment"
+            app:destination="@id/callingFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/searchDestinationFragment"
+        android:name="com.example.fyrflyuser.fragments.search.SearchDestinationFragment"
+        android:label="fragment_search_destination"
+        tools:layout="@layout/fragment_search_destination" >
+        <action
+            android:id="@+id/action_searchDestinationFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.fyrflyuser.fragments.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBookingFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.MyBooking.MyBookingFragment"
+        android:label="fragment_my_booking"
+        tools:layout="@layout/fragment_my_booking" />
+    <fragment
+        android:id="@+id/myWalletFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.MyWalletFragment"
+        android:label="fragment_my_wallet"
+        tools:layout="@layout/fragment_my_wallet" />
+    <fragment
+        android:id="@+id/convertToDriversFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.ConvertToDriversFragment"
+        android:label="fragment_convert_to_drivers"
+        tools:layout="@layout/fragment_convert_to_drivers" >
+        <action
+            android:id="@+id/action_convertToDriversFragment_to_homeDriverActivity2"
+            app:destination="@id/homeDriverActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/pushNotificationsFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.PushNotificationsFragment"
+        android:label="fragment_push_notifications"
+        tools:layout="@layout/fragment_push_notifications" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.fyrflyuser.fragments.home.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/reserveAtripFragment"
+        android:name="com.example.fyrflyuser.fragments.home.ReserveAtripFragment"
+        android:label="fragment_reserve_atrip"
+        tools:layout="@layout/fragment_reserve_atrip" />
+    <fragment
+        android:id="@+id/callingFragment"
+        android:name="com.example.fyrflyuser.fragments.home.CallingFragment"
+        android:label="fragment_calling"
+        tools:layout="@layout/fragment_calling" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.fyrflyuser.fragments.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <activity
+        android:id="@+id/homeDriverActivity2"
+        android:name="com.example.fyrflyuser.activites.HomeDriverActivity"
+        android:label="activity_home_driver"
+        tools:layout="@layout/activity_home_driver" />
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.fyrflyuser.fragments.navigationDrawerScreens.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" >
+        <action
+            android:id="@+id/action_updateProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.fyrflyuser.activites.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+</navigation>

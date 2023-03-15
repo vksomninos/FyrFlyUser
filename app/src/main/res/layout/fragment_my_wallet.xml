@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLay"
+    tools:context=".fragments.navigationDrawerScreens.MyWalletFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_color">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="My Wallet"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+               android:background="@drawable/bg_box"
+                android:backgroundTint="#D9D9D9"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/mywallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Wallet"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/dollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500025.20"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/mywallet"
+                    android:textSize="18sp"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_btn_pay"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/addphoto"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wallet Transaction History"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="18sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_box"
+        android:backgroundTint="#D9D9D9"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/car5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/logoright" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/car5"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp">
+                <TextView
+                    android:id="@+id/debit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debited"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="170.20"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:layout_toRightOf="@id/debit"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID:"
+                    android:layout_below="@+id/debit"
+                    android:layout_marginVertical="5dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/transactionAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NkvGbksjMRdpTas9"
+                    android:layout_below="@+id/debit"
+                    android:layout_toRightOf="@id/transaction"
+                    android:layout_marginVertical="5dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 Jan 2023"
+                    android:layout_below="@+id/transaction"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/dates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11: 06"
+                    android:layout_below="@+id/transaction"
+                    android:layout_toRightOf="@id/date"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_box"
+        android:backgroundTint="#D9D9D9"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/car6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:rotation="180"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/logoright" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/car6"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp">
+                <TextView
+                    android:id="@+id/credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Credited"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500.00"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:layout_toRightOf="@id/credit"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/transactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID:"
+                    android:layout_below="@+id/credit"
+                    android:layout_marginVertical="5dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/transactionAmounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AdminCredit001234453"
+                    android:layout_below="@+id/credit"
+                    android:layout_toRightOf="@id/transactions"
+                    android:layout_marginVertical="5dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/datenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 Jan 2023"
+                    android:layout_below="@+id/transactions"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/datess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:36"
+                    android:layout_below="@+id/transactions"
+                    android:layout_toRightOf="@id/datenew"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

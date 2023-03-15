@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/bg_box"
+    android:backgroundTint="#D9D9D9"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/car5"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/xuv" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/car5"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp">
+            <TextView
+                android:id="@+id/debit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have a notification"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You received a 5 star rating"
+                android:layout_below="@+id/debit"
+                android:layout_marginVertical="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Jan 2023"
+                android:layout_below="@+id/transaction"
+                android:drawableStart="@drawable/miniclock"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11: 06"
+                android:layout_below="@+id/transaction"
+                android:layout_toRightOf="@id/date"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

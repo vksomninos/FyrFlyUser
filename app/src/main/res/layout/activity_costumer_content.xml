@@ -1,0 +1,655 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/driverInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingLeft="20sp"
+                android:paddingTop="10sp"
+                android:paddingRight="20sp"
+                android:paddingBottom="30sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/driverProfileImage"
+                            android:layout_width="100sp"
+                            android:layout_height="100sp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10sp"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_default_user" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="4dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/ratingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/ic_star_black_24dp"
+                                android:drawablePadding="10sp"
+                                android:gravity="center"
+                                android:paddingLeft="10sp"
+                                android:paddingTop="5sp"
+                                android:paddingRight="10sp"
+                                android:paddingBottom="5sp"
+                                android:text="double_dash"
+                                android:textColor="@color/black" />
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15sp">
+
+                        <TextView
+                            android:id="@+id/driverPlate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="double_dash"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/driverCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:paddingBottom="5sp"
+                            android:text="double_dash"
+                            android:textColor="@color/gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+
+                    android:padding="15sp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:backgroundTint="@color/gray"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_call_black_24dp"
+                        android:text="phone_driver"
+                        android:textColor="@android:color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+
+
+                    <TextView
+                        android:id="@+id/driverName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingBottom="5sp"
+                        android:text="double_dash"
+                        android:textColor="@color/purple_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/gray"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_cancel_black_24dp"
+                        android:text="phone_driver"
+                        android:textColor="@android:color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/looking_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:clipToPadding="false"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/timeout_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10sp"
+                        android:text="@string/there_doesn_t_seem_to_be_a_driver_near_you_you_can_cancel_or_keep_searching"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/cancel_looking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:backgroundTint="@color/red"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_cancel_black_24dp"
+                        android:text="phone_driver"
+                        android:textColor="@android:color/white"
+                        android:tint="@color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="looking_driver"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        style="@style/SpinKitView.Wave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:SpinKit_Color="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/place_from_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/gray"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/place_from"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20sp"
+                                android:layout_weight="1"
+
+                                android:drawableStart="@drawable/ic_circle"
+                                android:drawablePadding="30sp"
+                                android:drawableTint="@color/red"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="From"
+                                android:textColor="@color/gray"
+                                tools:targetApi="m" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/current_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="10sp"
+                                android:backgroundTint="@color/white"
+                                android:elevation="0dp"
+                                android:src="@drawable/ic_location_on_grey_24dp"
+                                android:text="phone_driver"
+                                android:textColor="@android:color/white"
+                                android:tint="@color/black"
+                                app:borderWidth="0dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/from"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#808080" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8sp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/place_to"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20sp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/ic_circle_filled"
+                                android:drawablePadding="30sp"
+                                android:drawableTint="@color/green"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+
+                                android:text="To"
+                                android:textColor="@color/gray"
+                                tools:targetApi="m" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/AdddestinatinImage"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/frame" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginStart="33dp"
+                    android:background="@color/gray" />
+
+                <!--    BottomSheet No - 2-->
+                <LinearLayout
+                    android:id="@+id/radioLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="#D9D9D9" />
+
+                    <View
+                        android:id="@+id/viewpull"
+                        android:layout_width="90dp"
+                        android:layout_height="8dp"
+                        android:layout_below="@id/view1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/selected_car_layout" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical" />
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <RelativeLayout
+                        android:id="@+id/payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/selectCar_rv">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:drawableLeft="@drawable/currency"
+                            android:drawablePadding="10dp"
+                            android:text="Cash"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:rotation="-93"
+                            android:src="@drawable/down_arrow" />
+                    </RelativeLayout>
+
+                    <com.ncorti.slidetoact.SlideToActView
+                        android:id="@+id/request"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="15sp"
+                        app:border_radius="8dp"
+                        app:inner_color="@color/app_color"
+                        app:outer_color="@color/dark_color"
+                        app:slider_height="60dp"
+                        app:slider_icon="@drawable/ic_arrow_forward_black_24dp"
+                        app:slider_icon_color="@color/white"
+                        app:text="Confirm Ride "
+                        app:text_color="@color/app_color"
+
+                        app:text_style="bold" />
+                </LinearLayout>
+
+
+                <!--    BottomSheet No - 3-->
+
+                <LinearLayout
+                    android:id="@+id/confirmSelectedRide2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#B4FFFFFF"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/car">
+
+                    </ImageView>
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/switchforBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="20dp"
+                        app:colorBorder="@color/dark_color"
+                        app:colorOn="@color/app_color"
+                        app:textOff=""
+                        app:textOn="" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/selected_car_layout"
+                        android:elevation="6dp">
+
+                        <ImageView
+                            android:id="@+id/timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/car1" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toLeftOf="@+id/destance"
+                            android:layout_toRightOf="@id/timer"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ECONOMY"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtAppointmentID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Capacity: 3, Type: Taxi"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(Unavailable)"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/destance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="₹ 270"
+                            android:textColor="@color/gray"
+
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/paymentconf"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/selectCar_rv">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:drawableLeft="@drawable/currency"
+                            android:drawablePadding="10dp"
+                            android:text="Cash"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:rotation="-93"
+                            android:src="@drawable/down_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/confirm_rideselected"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/app_gradient"
+                            android:elevation="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Confirm Ride "
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/reserve_car"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/app_gradient"
+                            android:elevation="7dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/reserve_car">
+
+
+                            </ImageView>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</FrameLayout>
+

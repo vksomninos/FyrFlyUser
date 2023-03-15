@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.home.ReserveAtripFragment">
+
+   <RelativeLayout
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       android:background="@drawable/circle_bg"
+       android:elevation="10dp"
+       android:layout_marginHorizontal="10dp"
+       android:layout_marginTop="10dp">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:src="@drawable/arrowback"
+          app:tint="#FCBA01" />
+   </RelativeLayout>
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Reserve a trip"
+       android:gravity="center_horizontal"
+       android:textSize="14dp"
+       android:layout_marginStart="15dp"
+       android:textStyle="bold"
+       android:textColor="@color/black" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="14:40"
+       android:gravity="center_horizontal"
+       android:textSize="14dp"
+       android:textStyle="bold"
+       android:layout_marginStart="15dp"
+       android:textColor="@color/black" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Fri, 26 Jan"
+       android:gravity="center_horizontal"
+       android:textSize="14dp"
+       android:textStyle="bold"
+       android:layout_marginStart="15dp"
+       android:textColor="@color/black" />
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/calander"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginTop="10dp"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="10dp"
+       android:layout_marginHorizontal="25dp">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/group__23_"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Choose your exact pick-up time up to\n
+30 days in advance"
+          android:textSize="14dp"
+          android:layout_marginStart="15dp"
+          android:textStyle="bold"
+          android:textColor="@color/black" />
+
+   </LinearLayout>   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="25dp">
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical"
+       android:src="@drawable/filter"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="  Extra wait time include to meet your\n  trip"
+       android:textSize="14dp"
+       android:layout_marginStart="15dp"
+       android:textStyle="bold"
+       android:textColor="@color/black" />
+
+</LinearLayout>   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="25dp">
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical"
+       android:src="@drawable/card"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Cancel at no charge up to 60 minutes\n
+in advance"
+       android:textSize="14dp"
+       android:layout_marginStart="15dp"
+       android:textStyle="bold"
+       android:textColor="@color/black" />
+
+</LinearLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:orientation="vertical"
+       android:layout_marginHorizontal="25dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="See Terms"
+          android:textSize="12dp"
+          android:textStyle="bold"
+          android:textColor="@color/black" />
+      <View
+          android:layout_width="60dp"
+          android:layout_height="1dp"
+          android:background="@color/black" />
+
+
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity="bottom"
+       android:orientation="horizontal"
+       android:gravity="bottom">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="70dp"
+          android:orientation="horizontal"
+
+          android:layout_gravity="bottom">
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/submit"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Cancel"
+             android:layout_weight="1"
+             android:background="@color/app_color"
+             android:textStyle="bold"
+             android:textSize="14sp"/>
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/submits"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:background="@drawable/bg_btn_pay"
+             android:text="Set"
+             android:textStyle="bold"
+             android:textSize="16sp"/>
+      </LinearLayout>
+
+   </LinearLayout>
+
+
+</LinearLayout>

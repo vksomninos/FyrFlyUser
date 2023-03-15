@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "619320393221",
+    "project_id": "fyrfly-8f59f",
+    "storage_bucket": "fyrfly-8f59f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619320393221:android:3117d74cac87f2c8f0266c",
+        "android_client_info": {
+          "package_name": "com.example.fyrflyuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619320393221-t7ao5o5g60vu54f1333iji7m1hthgmon.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPzA6WSCwQzxVJhNc1DYnMc3vjyZ1T0Ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619320393221-t7ao5o5g60vu54f1333iji7m1hthgmon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
